@@ -154,9 +154,9 @@ const CountryRanking: React.FC<RankingProps> = ({ title, countries, rate }) => {
             </Button>
           </Box>
         </Box>
-        <Grid container spacing={2}>
+        <Grid container spacing={1.5}>
           <Grid size={12}>
-            <Box height={200}>
+            <Box height={160}>
               <ResponsiveContainer width={200}>
                 <PieChart>
                   <Pie
@@ -191,7 +191,7 @@ const CountryRanking: React.FC<RankingProps> = ({ title, countries, rate }) => {
                 />
                 <Box key={index}>
                   <Typography variant="caption">{country.name}</Typography>
-                  <Typography variant="h6">
+                  <Typography variant="subtitle1" fontWeight={"600"}>
                     {country.value.toLocaleString()}
                   </Typography>
                 </Box>
