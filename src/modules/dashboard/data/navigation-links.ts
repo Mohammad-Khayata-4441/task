@@ -20,7 +20,7 @@ import {
 export const navigationItems: NavigationItem[] = [
     { label: "navigation.statistics", path: "/", icon: CampaignOutlined },
     { label: "navigation.advancedSearch", path: "/advanced-search", icon: FilterAltOutlined },
-    { label: "navigation.conversations", path: "/conversations", icon: ChatOutlined },
+    { label: "navigation.conversations", path: "/chat", icon: ChatOutlined },
     { label: "navigation.users", path: "/users", icon: GroupOutlined, children: [] },
     { label: "navigation.orders", path: "/orders", icon: ShoppingCartOutlined, children: [] },
     { label: "navigation.questions", path: "/questions", icon: HelpOutlined },
