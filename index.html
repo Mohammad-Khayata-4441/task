@@ -11,9 +11,10 @@
     <script type="module" src="/src/main.tsx"></script>
     <script>
       const lang = localStorage.getItem("language");
-      const html = document.querySelector("html");
-      html?.setAttribute("lang", lang);
-      html?.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      const body = document.querySelector("body");
+      body?.setAttribute("lang", lang);
+      // body?.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      body?.setAttribute("dir", "rtl");
     </script>
   </body>
 </html>
