@@ -129,12 +129,18 @@ const CountryRanking: React.FC<RankingProps> = ({ title, countries, rate }) => {
                   py: 0.2,
                   color: (t) => t.palette.primary.main,
                   px: 1,
-                  fontWeight: "bold",
-                  fontSize: 12,
                 }}
                 color="primary"
               >
-                آخر أسبوع
+                <Typography
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: 12,
+                  }}
+                  variant="caption"
+                >
+                  آخر أسبوع
+                </Typography>
               </Box>
             </Box>
           </Box>
