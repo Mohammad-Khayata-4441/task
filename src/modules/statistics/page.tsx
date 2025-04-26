@@ -1,3 +1,4 @@
+import { HiTrendingUp } from "react-icons/hi";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import React from "react";
 import {
@@ -14,7 +15,6 @@ import {
   ShoppingBag as ShoppingBagIcon,
   CheckCircle as CheckCircleIcon,
   Error as ErrorIcon,
-  NavigateBefore as NavigateBeforeIcon,
 } from "@mui/icons-material";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import {
@@ -44,7 +44,7 @@ interface RankingProps {
   subtitle: string;
   countries: CountryData[];
   showPieChart: boolean;
-  timestamp: string;
+  rate: string;
 }
 
 // StatCard Component
@@ -91,11 +91,7 @@ const StatCard: React.FC<StatCardProps> = ({
 };
 
 // CountryRanking Component
-const CountryRanking: React.FC<RankingProps> = ({
-  title,
-  countries,
-  timestamp,
-}) => {
+const CountryRanking: React.FC<RankingProps> = ({ title, countries, rate }) => {
   // Data for pie chart
   const data = countries.map((country) => ({
     name: country.name,
@@ -119,12 +115,16 @@ const CountryRanking: React.FC<RankingProps> = ({
               {title}
             </Typography>
             <Box display="flex" alignItems="center">
-              <Typography variant="caption" color="text.secondary">
-                {timestamp}
+              <Typography
+                variant="caption"
+                color="success"
+                sx={{ marginInlineEnd: 1 }}
+              >
+                <HiTrendingUp />+{rate}
               </Typography>
-              <NavigateBeforeIcon sx={{ fontSize: 18 }} />
               <Box
                 sx={{
+                  borderRadius: 1,
                   backgroundColor: (t) => alpha(t.palette.primary.main, 0.1),
                   py: 0.2,
                   color: (t) => t.palette.primary.main,
@@ -268,7 +268,7 @@ const Dashboard: React.FC = () => {
             subtitle="قائمة البلدان حسب النقاط"
             countries={countriesByPoints}
             showPieChart={true}
-            timestamp="04/26/2025"
+            rate="970"
           />
         </Grid>
 
@@ -278,7 +278,7 @@ const Dashboard: React.FC = () => {
             subtitle="قائمة البلدان حسب الطلبات"
             countries={countriesByRequests}
             showPieChart={true}
-            timestamp="04/26/2025"
+            rate="970"
           />
         </Grid>
 
@@ -288,7 +288,7 @@ const Dashboard: React.FC = () => {
             subtitle="قائمة المنتجات الأكثر مبيعاً"
             countries={productReport}
             showPieChart={true}
-            timestamp="04/26/2025"
+            rate="970"
           />
         </Grid>
 
@@ -298,7 +298,7 @@ const Dashboard: React.FC = () => {
             subtitle="قائمة الدول حسب عدد المستخدمين"
             countries={countriesByUsers}
             showPieChart={true}
-            timestamp="04/26/2025"
+            rate="970"
           />
         </Grid>
       </Grid>
