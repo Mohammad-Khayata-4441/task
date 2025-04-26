@@ -1,0 +1,41 @@
+{
+  "hello": "مرحبا",
+  "dashboard": {
+    "title": "لوحة التحكم"
+  },
+  "home": {
+    "title": "الرئيسية"
+  },
+  "products": {
+    "title": "المنتجات"
+  },
+  "ui": {
+    "profile": "الملف الشخصي"
+  },
+  "users": {
+    "title": "المستخدمين"
+  },
+  "main": "الرئيسية",
+  "navigation": {
+    "campaigns": "الحملات",
+    "advancedSearch": "فلترة متقدمة",
+    "conversations": "المحادثات",
+    "users": "المستخدمين",
+    "orders": "الطلبات",
+    "questions": "الأسئلة",
+    "pointsAndNotifications": "النقاط والإشعارات",
+    "giftCategories": "تصنيفات الهدايا",
+    "countries": "البلدان",
+    "adZones": "حوائط الإعلانات",
+    "ads": "الإعلانات",
+    "specialOffers": "العروض الخاصة",
+    "adminUsers": "مستخدمين الإدارة",
+    "management": "الإدارة",
+    "generalSettings": "الإعدادات العامة",
+    "statistics": "الإحصائيات"
+  },
+  "app": {
+    "searchForUser": "ابحث عن مستخدم",
+    "searchForNumber": "ابحث عن رقم هاتف"
+  }
+}

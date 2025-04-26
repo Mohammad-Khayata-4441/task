@@ -1,0 +1,38 @@
+{
+  "hello": "Hello",
+  "home": {
+    "title": "Home"
+  },
+  "products": {
+    "title": "Products"
+  },
+  "ui": {
+    "profile": "The profile"
+  },
+  "users": {
+    "title": "Users"
+  },
+  "main": "Main",
+  "navigation": {
+    "campaigns": "Campaigns",
+    "advancedSearch": "Advanced Filter",
+    "conversations": "Conversations",
+    "users": "Users",
+    "orders": "Orders",
+    "questions": "Questions",
+    "pointsAndNotifications": "Points and Notifications",
+    "giftCategories": "Gift Categories",
+    "countries": "Countries",
+    "adZones": "Ad Zones",
+    "ads": "Advertisements",
+    "specialOffers": "Special Offers",
+    "adminUsers": "Admin Users",
+    "management": "Management",
+    "generalSettings": "General Settings",
+    "statistics": "Statistics"
+  },
+  "app": {
+    "searchForUser": "Search For User",
+    "searchForNumber": "Search For Number"
+  }
+}
