@@ -7,12 +7,12 @@ import LastPageOutlinedIcon from "@mui/icons-material/LastPageOutlined";
 import FirstPageOutlinedIcon from "@mui/icons-material/FirstPageOutlined";
 
 import {
-  Badge,
   Typography,
   Divider,
   Avatar,
-  Tooltip,
   Card,
+  Badge,
+  Tooltip,
   Button,
 } from "@mui/material";
 import DashboardNavLinks from "./DashboardNavLinks";
@@ -20,15 +20,10 @@ import DashboardNavLinks from "./DashboardNavLinks";
 import { useTranslation } from "react-i18next";
 import { ColorModeContext } from "@/modules/common/hooks/useDarkMode";
 import { APP_CONFIG } from "@/core/config/app.config";
-import {
-  Add,
-  DarkMode,
-  LightMode,
-  Logout,
-  Notifications,
-  Settings,
-} from "@mui/icons-material";
+
 import { navigationItems } from "../../data/navigation-links";
+import { MessageOutlined, NotificationsOutlined } from "@mui/icons-material";
+import { BsPaypal } from "react-icons/bs";
 const openedMixin = (theme: Theme, drawerWidth: number): CSSObject => ({
   width: drawerWidth,
   transition: theme.transitions.create("width", {
@@ -102,14 +97,10 @@ export default function DrawerSidebar({
 }: Props) {
   const [, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-  const { i18n } = useTranslation();
-
   // const [open, setOpen] = React.useState(false);
   // const [isMobileDrawerOpen, setMobileDrawerOpen] = React.useState(false)
   const { mode, setMode } = React.useContext(ColorModeContext);
-  const toggle = () => {
-    setMode(mode === "dark" ? "light" : "dark");
-  };
+
   const drawerWidth = React.useMemo(
     () => (open ? drawerFullWidth : miniSizedDrawerWidth),
     [drawerFullWidth, miniSizedDrawerWidth, open]
@@ -270,6 +261,60 @@ export default function DrawerSidebar({
                   Admin
                 </Typography>
               </Box>
+            </Box>
+
+            <Box display={{ xs: "flex" }} mt={2} flexWrap={"wrap"} gap={2}>
+              <Badge color="error" badgeContent={5}>
+                <IconButton
+                  // size="small"
+                  sx={{
+                    aspectRatio: "1/1",
+                    height: 35,
+                    backgroundColor: "#eeeeee",
+                  }}
+                >
+                  <MessageOutlined style={{ fontSize: 20 }}></MessageOutlined>
+                </IconButton>
+              </Badge>
+
+              <Badge color="error" badgeContent={12}>
+                <IconButton
+                  sx={{
+                    aspectRatio: "1/1",
+                    height: 35,
+                    backgroundColor: "#eeeeee",
+                  }}
+                >
+                  <NotificationsOutlined
+                    style={{ fontSize: 20 }}
+                  ></NotificationsOutlined>
+                </IconButton>
+              </Badge>
+
+              <Badge color="error" badgeContent={33}>
+                <IconButton
+                  sx={{
+                    aspectRatio: "1/1",
+                    height: 35,
+                    backgroundColor: "#eeeeee",
+                  }}
+                >
+                  <BsPaypal
+                    style={{ fontSize: 20, color: "blueviolet" }}
+                  ></BsPaypal>
+                </IconButton>
+              </Badge>
+              <Badge color="error" badgeContent={33}>
+                <IconButton
+                  sx={{
+                    aspectRatio: "1/1",
+                    height: 35,
+                    backgroundColor: "#eeeeee",
+                  }}
+                >
+                  <BsPaypal style={{ fontSize: 20, color: "red" }}></BsPaypal>
+                </IconButton>
+              </Badge>
             </Box>
           </Card>
         </Box>
