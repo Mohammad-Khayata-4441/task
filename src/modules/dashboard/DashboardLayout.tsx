@@ -79,7 +79,9 @@ const DashboardLayout = (props: React.PropsWithChildren) => {
         <Box display="flex" justifyContent={"space-between"} mb={2}>
           <Box
             className="left"
-            display={"flex"}
+            display={{
+              lg: "none",
+            }}
             gap={2}
             alignItems={"center"}
             justifyContent={"center"}
@@ -91,9 +93,6 @@ const DashboardLayout = (props: React.PropsWithChildren) => {
               edge="start"
               sx={{
                 marginInlineEnd: 1,
-                display: {
-                  lg: "none",
-                },
               }}
             >
               <BiMenuAltRight />
