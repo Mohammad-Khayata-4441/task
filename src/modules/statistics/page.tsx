@@ -262,13 +262,13 @@ const Dashboard: React.FC = () => {
       <Grid container spacing={1}>
         {/* Stats Cards */}
         {statsData.map((stat, index) => (
-          <Grid size={4} key={index}>
+          <Grid size={{ xs: 6, lg: 4 }} key={index}>
             <StatCard {...stat} />
           </Grid>
         ))}
 
         {/* Country Rankings */}
-        <Grid size={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <CountryRanking
             title="أعلى 10 بلدان حسب النقاط"
             subtitle="قائمة البلدان حسب النقاط"
@@ -278,7 +278,7 @@ const Dashboard: React.FC = () => {
           />
         </Grid>
 
-        <Grid size={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <CountryRanking
             title="أعلى 10 بلدان حسب الطلبات"
             subtitle="قائمة البلدان حسب الطلبات"
@@ -288,7 +288,7 @@ const Dashboard: React.FC = () => {
           />
         </Grid>
 
-        <Grid size={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <CountryRanking
             title="تقرير المنتجات"
             subtitle="قائمة المنتجات الأكثر مبيعاً"
@@ -298,7 +298,7 @@ const Dashboard: React.FC = () => {
           />
         </Grid>
 
-        <Grid size={6}>
+        <Grid size={{ xs: 12, lg: 6 }}>
           <CountryRanking
             title="اعلى 10 دول حسب المستخدمين"
             subtitle="قائمة الدول حسب عدد المستخدمين"

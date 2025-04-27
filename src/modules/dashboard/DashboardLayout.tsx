@@ -1,3 +1,4 @@
+import { BiMenuAltRight } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import { BsPaypal } from "react-icons/bs";
 import * as React from "react";
@@ -72,10 +73,33 @@ const DashboardLayout = (props: React.PropsWithChildren) => {
           flexDirection: "column",
           pb: 2,
           px: 4,
-          pt: { xs: 0, lg: 2 },
+          pt: { xs: 2, lg: 2 },
         }}
       >
         <Box display="flex" justifyContent={"space-between"} mb={2}>
+          <Box
+            className="left"
+            display={"flex"}
+            gap={2}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <IconButton
+              onClick={() => setMobileDrawerOpen(!isMobileDrawerOpen)}
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              sx={{
+                marginInlineEnd: 1,
+                display: {
+                  lg: "none",
+                },
+              }}
+            >
+              <BiMenuAltRight />
+            </IconButton>
+          </Box>
+
           <Box display={"flex"} gap={2}>
             <TextField
               placeholder={t("app.searchForUser")}
@@ -99,7 +123,7 @@ const DashboardLayout = (props: React.PropsWithChildren) => {
             </TextField>
           </Box>
 
-          <Box display={"flex"} gap={1}>
+          <Box display={{ xs: "none", md: "flex" }} gap={1}>
             <Badge color="error" badgeContent={5}>
               <IconButton
                 // size="small"

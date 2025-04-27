@@ -497,12 +497,22 @@ const QuizManagementUI: React.FC = () => {
             sx={{
               padding: 0,
               mb: 2,
+              gap: 2,
               display: "flex",
               justifyContent: "space-between",
               flexWrap: "wrap",
             }}
           >
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+
+                flexGrow: { xs: 1, md: 0 },
+
+                gap: 2,
+                flexWrap: "wrap",
+              }}
+            >
               <TextField
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -514,14 +524,14 @@ const QuizManagementUI: React.FC = () => {
               />
             </Box>
 
-            <Box sx={{ display: "flex", gap: 2 }}>
+            <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
               <Button
                 variant="outlined"
                 startIcon={<CloudUploadIcon />}
                 color="primary"
                 sx={{
                   border: "none",
-
+                  flexGrow: { xs: 1, md: 0 },
                   borderRadius: "5px",
                   height: "40px",
                   bgcolor: "#e8f5e9",
@@ -544,6 +554,8 @@ const QuizManagementUI: React.FC = () => {
                 variant="outlined"
                 startIcon={<AddIcon />}
                 sx={{
+                  flexGrow: { xs: 1, md: 0 },
+
                   border: "none",
                   backgroundColor: "#eeeeee",
                   height: "40px",
